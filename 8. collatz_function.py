@@ -5,7 +5,15 @@ def collatz(number):
         return 3*number+1
 
 print("Enter number:")
-number=int(input())
+
+while True:
+    try:
+        number=int(input())
+    except:
+        print("You need to enter an Integer Number.")
+    else:
+        break
+
 while number!=1:
     print(collatz(number))
     number=collatz(number)
